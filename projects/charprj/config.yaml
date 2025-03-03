@@ -1,0 +1,24 @@
+Model:
+    CharSet: [' ', W, M, '2', '3', U, L, '7', '4', G, S, A, D, '5', C, K, Q, X, '9',
+        u, H, '6', P, T, J, I, E, F, '8', V, Z, N, B, R, Y]
+    ImageChannel: 3
+    ImageHeight: 64
+    ImageWidth: -1
+    Word: false
+System:
+    Allow_Ext: [jpg, jpeg, png, bmp]
+    GPU: true
+    GPU_ID: 0
+    Path: /root/dddd-tainer-test/tsk
+    Project: charprj
+    Val: 0.03
+Train:
+    BATCH_SIZE: 32
+    CNN: {NAME: ddddocr}
+    DROPOUT: 0.3
+    LR: 0.01
+    OPTIMIZER: SGD
+    SAVE_CHECKPOINTS_STEP: 2000
+    TARGET: {Accuracy: 0.97, Cost: 0.05, Epoch: 20}
+    TEST_BATCH_SIZE: 32
+    TEST_STEP: 1000
